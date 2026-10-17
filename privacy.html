@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09181e">
+<meta name="description" content="Privacy policy for BiteWindow mosquito activity and community reporting.">
+<title>Privacy Policy | BiteWindow</title>
+<style>
+:root{color-scheme:dark;--bg:#09181e;--pane:#10262d;--line:#29464d;--text:#eff9f4;--sub:#aec4c1;--mint:#b9f4cf}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 20% -10%,#205241 0,transparent 45%),var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}main{max-width:850px;margin:0 auto;padding:26px 20px 80px}header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-bottom:30px}.logo{display:flex;align-items:center;gap:12px;font-weight:850;font-size:21px;letter-spacing:-.03em}.logo img{height:48px;width:48px;border-radius:12px}.back,a{color:var(--mint)}.back{text-decoration:none;font-weight:650}h1{font-size:clamp(32px,6vw,50px);letter-spacing:-.05em;line-height:1.1;margin:10px 0}h2{font-size:21px;line-height:1.3;letter-spacing:-.025em;margin:29px 0 10px}p,li{color:var(--sub)}p{margin:10px 0}ul{padding-left:24px}li{margin:8px 0}.eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--mint);font-size:12px;font-weight:800}.card{border:1px solid var(--line);border-radius:18px;background:var(--pane);padding:22px;margin:24px 0}.card h2{margin-top:0}a:focus-visible{outline:2px solid var(--mint);outline-offset:4px}footer{margin-top:34px;padding-top:20px;border-top:1px solid var(--line);color:var(--sub);font-size:13px}
+</style>
+</head>
+<body>
+<main>
+<header><div class="logo"><img src="./icon-192.png" alt="BiteWindow mosquito icon"><span>BiteWindow</span></div><a class="back" href="./">← Back to BiteWindow</a></header>
+<div class="eyebrow">Privacy and data handling</div>
+<h1>Privacy Policy</h1>
+<p><strong>Effective date:</strong> October 17, 2026</p>
+<p>BiteWindow provides experimental mosquito activity estimates, weather information, prevention guidance, and an optional community reporting feature. This policy describes how the current app works and how the planned community submission service handles information when enabled.</p>
+<div class="card"><h2>Contact</h2><p>For privacy questions or requests concerning information submitted to BiteWindow, email <a href="mailto:bitewindow.privacy@gmail.com">bitewindow.privacy@gmail.com</a>.</p><p><strong>Current release note:</strong> Public community submissions are not yet enabled on the BiteWindow website. The reporting backend is undergoing testing.</p></div>
+<h2>1. Weather forecasts and location</h2>
+<p>You can search for a city or choose to allow your device to provide a location. If you permit location access, BiteWindow receives coordinates in your browser to request relevant weather data. A city search uses a geocoding service to obtain coordinates. BiteWindow sends coordinates and weather-related requests to Open-Meteo services to display local forecasts and calculate an experimental mosquito activity score. Your browser may also transmit technical connection information, such as your IP address, to those services.</p>
+<p>BiteWindow does not require access to your device's location; you may search for a city instead. Browser location permission can be changed in your device or browser settings.</p>
+<h2>2. Information saved on your device</h2>
+<p>BiteWindow stores user-created outing reports in your browser's local storage. These reports may include the date and time of your outing, approximate geographic grid, selected place name, weather readings, exposure duration, bite count, prevention settings, and the app's modeled score. A randomly generated contributor identifier may also be stored on the device for optional community submissions. These records remain on that browser unless you choose to submit a report or export them.</p>
+<p>You can remove locally saved data using your browser's site-data controls. Clearing app data may also remove reports or preferences you have not exported.</p>
+<h2>3. Optional community reports (not yet publicly enabled)</h2>
+<p>When this feature is activated, submitting a report will be optional and separate from saving an outing locally. The current reporting API is designed to receive an approximate geographic grid, reporting date, bite count, outdoor exposure duration, broad repellent status, and a pseudonymous contributor identifier. It does not require an account name or email address and does not intentionally submit raw GPS coordinates in the report payload. The backend converts the contributor identifier to a keyed hash before storing it.</p>
+<p>The approximate grid, dates and pseudonymous identifier can still relate to a person's activities and should not be treated as fully anonymous. Cloudflare processes technical request information to deliver and protect the service, including verification information used by Turnstile.</p>
+<h2>4. Community statistics</h2>
+<p>BiteWindow intends to publish only aggregated neighborhood-level counts, not individual report records. The current API releases totals for a geographic grid over the previous 30 days only after at least 20 outings and 10 distinct pseudonymous contributors have been recorded. Smaller groups return an insufficient-data response. Aggregation reduces disclosure risks but does not guarantee anonymity.</p>
+<p>Community observations are self-reported and are not verified medical diagnoses or scientifically validated bite probabilities.</p>
+<h2>5. Retention and deletion</h2>
+<p>The community backend is configured with a daily task intended to remove report records more than 90 days old. This scheduled cleanup must be verified in operation before reporting is made public. Locally saved reports stay on your device until you clear them or your browser removes its storage.</p>
+<p>To ask about accessing or deleting community report data, contact <a href="mailto:bitewindow.privacy@gmail.com">bitewindow.privacy@gmail.com</a>. Because reports are pseudonymous and are not linked to email addresses, an email address alone does not identify which report belongs to a requester. A secure report-identification and deletion process is still being implemented; public submissions will remain disabled until it is available. Do not email precise GPS coordinates or other sensitive personal information unless specifically necessary.</p>
+<h2>6. Service providers</h2>
+<ul><li><strong>GitHub Pages:</strong> hosts the BiteWindow website and related static files.</li><li><strong>Open-Meteo:</strong> provides geocoding and weather forecast data requested by the app.</li><li><strong>Cloudflare Workers and D1:</strong> host the optional community-reporting API and database.</li><li><strong>Cloudflare Turnstile:</strong> helps protect optional submissions from automated abuse.</li></ul>
+<p>These providers may handle technical usage data under their own applicable policies. BiteWindow does not currently include a third-party advertising tracker in the reviewed prototype.</p>
+<h2>7. Sharing and public feature requests</h2>
+<p>If you use your device's sharing controls, you decide which app or recipient receives the shared BiteWindow link. BiteWindow's feature-request control opens GitHub Issues; information you choose to publish there may be publicly visible. Do not include private contact details or exact location histories in public feature requests.</p>
+<h2>8. Children</h2>
+<p>BiteWindow is intended for general informational use and is not designed to collect community reports from children. Do not submit information about a child. Any children-specific collection or account functionality would require a separate review before release.</p>
+<h2>9. Changes</h2>
+<p>We may update this policy as BiteWindow's features and data practices change. The effective date at the top of this page will indicate the latest published revision. Material changes will be reflected here before affected features are enabled.</p>
+<h2>10. Mosquito and health information</h2>
+<p>BiteWindow's weather-based mosquito activity estimates and prevention guidance are informational. They do not establish a person's actual chance of being bitten and do not provide medical diagnosis or individualized medical advice. Official public-health agencies are the appropriate source for local disease advisories.</p>
+<footer>© 2026 BiteWindow · <a href="./">Return to forecast</a> · <a href="mailto:bitewindow.privacy@gmail.com">Privacy contact</a></footer>
+</main>
+</body>
+</html>
