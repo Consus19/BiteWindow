@@ -1,0 +1,7 @@
+{
+  "name": "bitewindow",
+  "version": "0.8.0",
+  "private": true,
+  "scripts": {"test": "node tests/browser.cjs"},
+  "devDependencies": {"playwright": "1.62.1"}
+}
